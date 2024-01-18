@@ -17,6 +17,7 @@
                 <option value="divide">/</option>
                 <option value="subtract">-</option>
                 <option value="multiply">*</option>
+                <option value="square">^</option>
             </select>
             <input type="number" name="num02" placeholder="Number Two"> 
             <button>Calculate</button>
@@ -57,6 +58,9 @@
                         break;
                     case "multiply":
                         $value = $num01 * $num02;
+                        break;
+                    case "square":
+                        $value = pow($num01, $num02);
                         break;
                     default:
                         echo "<p class='calc-error'>Calculator fucked up somehow </p>";
